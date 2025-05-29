@@ -1,0 +1,14 @@
+---
+title: "homework 3"
+format: docx
+editor: visual
+---
+```{r}
+library(tidyverse)
+library(here)
+library(flextable)
+library(janitor)
+```
+
+### A.
+
