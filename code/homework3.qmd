@@ -1,10 +1,17 @@
 ---
-title: "homework 3"
-format: docx
+title: "ENVS 193DS Homework 3"
+author: "Jess Rousselle"
+date: 2025-05-30
+format: html
 editor: visual
 ---
 
+#### Setup
+
 ```{r}
+#| message: false
+#| warning: false
+#loading in packages
 library(tidyverse)
 library(here)
 library(flextable)
@@ -14,20 +21,23 @@ library(dplyr)
 
 ### A.
 
-I could calculate the central tendencies for walking pace for both categories of shoe that I wear (docs or sneakers) to see if my shoes affect my walking pace. I think that docs make me walk slower since they are less comfortable.
+I could calculate the central tendencies (median, IQR, max, min) for walking pace for both categories of shoe that I wear (docs or sneakers) to see if my shoes affect my walking pace. I think that my median walking pace will be lower for docs since they are less comfortable.
 
 ### B.
 
 ```{r}
-my_data <- read.csv("data/my_data .csv") #reading in data
-
+#| label: Data Visualization
+#| message: false
+#| warning: false
+setwd('/Users/jessrousselle/Desktop/github/ENVS-193DS_homework-03')
+my_data <- read_csv("data/my_data .csv") #reading in data
 ggplot(data = my_data, #setting data frame to my_data
        aes(x = Type_of_Shoe, #setting x axis to type of shoe
            y = Pace_min,
            fill = Type_of_Shoe)) + #setting y axis to pace
      scale_fill_manual(values=c("#FF9FE5", "#2B50AA")) + 
   geom_boxplot() + #creating a box plot
-    geom_jitter(width = 0.2,
+    geom_jitter(width = 0.2, #jittering the points horizontally
                 height = 0) +
     labs(x = "Type of Shoe", #labels for x and y axis
          y = "Pace (min)")
@@ -40,23 +50,24 @@ ggplot(data = my_data, #setting data frame to my_data
 ### D.
 
 ```{r}
-data_summary <- my_data |> 
-  group_by(Type_of_Shoe) |> 
+#summarizing the data
+data_summary <- my_data |> #creating data_summary to store values
+  group_by(Type_of_Shoe) |> #grouping by Type_of_shoe
   summarise(
-    median = round(median(Pace_min), digits = 1),
-    minimum = round(min(Pace_min), digits = 1),
-    maximum = round(max(Pace_min), digits = 1),
-    IQR = round(IQR(Pace_min), digits = 1)
+    median = round(median(Pace_min), digits = 1), #calculating the median Pace_min
+    minimum = round(min(Pace_min), digits = 1), #calculating mimumum Pace_min
+    maximum = round(max(Pace_min), digits = 1), #calculating maximum Pace_min
+    IQR = round(IQR(Pace_min), digits = 1) #calculating interquartile range for Pace_min
   )
 ft <- flextable(data_summary) #creating table from my_data and storing it as an object called ft
-ft <- set_caption(ft, caption = "Walking Pace in Docs vs Sneakers")
-ft <- set_header_labels(ft,
+ft <- set_caption(ft, caption = "Walking Pace in Docs vs Sneakers") #adding caption
+ft <- set_header_labels(ft, #creating more descriptive labels
                         median = "Median (min)",
                         minimum = "Minimum (min)",
                         maximum = "Maximum (min)",
                         IQR = "IQR (min)",
                         Type_of_Shoe = "Type of Shoe")
-ft <- theme_box(ft)
+ft <- theme_box(ft) #changing theme of table
 ft
 ```
 
@@ -64,7 +75,7 @@ ft
 
 ### A.
 
-An affective visualization for my data could be a drawing of each shoe that I was wearing for each observation. These shoe drawings would be distributed on the page to show the walking pace for that observation. This could be done by drawing a finish line and drawing shoes with a faster pace closer to the line and shoes that resulted in a slower pace further from the line.
+An affective visualization for my data could be a drawing of the type of shoe that I was wearing for each observation. These shoe drawings would be plotted on the page to show the walking pace (x-axis) for that observation. This could be done by drawing a finish line and drawing shoes with a faster pace closer to the line and shoes that resulted in a slower pace further from the line.
 
 ### B.
 
@@ -76,7 +87,7 @@ An affective visualization for my data could be a drawing of each shoe that I wa
 
 ### D.
 
-My piece shows my different shoes and my walking pace while I was wearing them. I was inspired by Stefanie Posavec and Giorgia Lupi’s Dear Data project. My work is a digital drawing on my ipad. I did this by drawing each shoe and then making an axis for walking pace (min) at the bottom and jittering each point (shoe) vertically.
+My piece shows my shoe type and my walking pace (min) for each data observation that I recorded. I was inspired by Stefanie Posavec and Giorgia Lupi’s Dear Data project because they displayed all their data through drawings and I wanted to do the same. My work is a digital drawing on my ipad. I did this by drawing each shoe and then making an axis for walking pace (min) at the bottom and jittering each point (shoe) vertically.
 
 #### Problem 3.
 
@@ -88,7 +99,7 @@ This research paper aimed to answer how ocean acidification impacts coral growth
 
 ### B.
 
-The authors were able to visually represent their statistics very clearly by showing the mean calcification rate for each colony, as represented by each bar on the graph. Additionally, the error bars provide a visual representation of an uncertainty in the data. Furthermore, the x and y axis of the bar chart are clear and understandable with calcification rate on the x-axis and the dates for each observation period on the y-axis.
+The authors were able to visually represent their statistics very clearly by showing the mean calcification rate for each coral colony, as represented by each bar on the graph which are clearly distinguished by color between control and treatment groups. Additionally, the error bars provide a visual representation of standard error for the data. Furthermore, the x and y axis of the bar chart are clear and understandable with calcification rate on the x-axis and the dates for each observation period on the y-axis.
 
 ### C.
 
@@ -96,4 +107,4 @@ The bar chart has a good data:ink ratio because there is no excess visual clutte
 
 ### D.
 
-One recommendation that I would make for this figure is to move the figure number from the top of the figure to the caption so that everything is grouped together in one chunk. Visually, I think that this would make more sense and be more clear. In addition, the researchers could also add a short descriptive title at the top of the figure so that the viewer immediately knows what data is being displayed. Furthermore, I would recommend changing the colors to something slightly more intuitive. Personally, I would assume that the white bars are the control because they seem "blank," however it is actually the opposite in this figure. I think it would make most sense to change the treatment color to a light red to represent an acidic environment and the control color to be more blue to represent the natural ocean pH since these colors are widely accepted and intuitive for a pH scale.
+One recommendation that I would make for this figure is to move the figure number from the top of the figure to the caption so that everything is grouped together in one chunk. Visually, I think that this would make more sense and be more clear. In addition, the researchers could also add a short descriptive title at the top of the figure so that the viewer immediately knows what data is being displayed. Furthermore, I would recommend changing the colors to something slightly more intuitive. Personally, I would assume that the white bars are the control because they seem "blank," however it is actually the opposite in this figure. I think it would make the most sense to either flip the black and white bars or to add colors. For example, it would make sense to change the treatment color to a light red to represent an acidic environment and the control color to be more blue to represent the natural ocean pH since these colors are widely accepted and intuitive for a pH scale.
