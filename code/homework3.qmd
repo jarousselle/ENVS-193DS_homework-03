@@ -85,3 +85,7 @@ My piece shows my different shoes and my walking pace while I was wearing them. 
 This research paper aimed to answer how ocean acidification impacts coral growth, which was done by performing a one way ANCOVA test that showed the reduction in calcification rates of coral in the acidification treatment was significant in comparison to the control group.
 
 ![](images/figure_screenshot.png)
+
+### B.
+
+The authors were able to visually represent their statistics very clearly by showing the mean calcification rate for each colony, as represented by each bar on the graph. Additionally, the error bars provide a visual representation of an uncertainty in the data. Furthermore, the x and y axis of the bar chart are clear and understandable with calcification rate on the x-axis and the dates for each observation period on the y-axis.
