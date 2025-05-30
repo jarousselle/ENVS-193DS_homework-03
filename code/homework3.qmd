@@ -43,12 +43,26 @@ ggplot(data = my_data, #setting data frame to my_data
 data_summary <- my_data |> 
   group_by(Type_of_Shoe) |> 
   summarise(
-    Median (mm.ss) = round(median(Pace), digits = 1),
-    Minimum (mm.ss) = round(min(Pace), digits = 1),
-    Maximum (mm.ss) = round(max(Pace), digits = 1),
-    IQR (mm.ss) = round(IQR(Pace), digits = 1)
+    median = round(median(Pace), digits = 1),
+    minimum = round(min(Pace), digits = 1),
+    maximum = round(max(Pace), digits = 1),
+    IQR = round(IQR(Pace), digits = 1)
   )
 ft <- flextable(data_summary) #creating table from my_data and storing it as an object called ft
+ft <- set_caption(ft, caption = "Walking Pace in Docs vs Sneakers")
+ft <- set_header_labels(ft,
+                        median = "Median (min)",
+                        minimum = "Minimum (min)",
+                        maximum = "Maximum (min)",
+                        IQR = "IQR (min)",
+                        Type_of_Shoe = "Type of Shoe")
+ft <- theme_box(ft)
 ft
 ```
 
+
+#### Problem 2.
+
+### A.
+
+An affective visualization for my data could be a drawing of each shoe that I was wearing for each observation. These shoe drawings would be distributed on the page to show the walking pace for that observation. This could be done by drawing a finish line and drawing shoes with a faster pace closer to the line and shoes that resulted in a slower pace further from the line.
