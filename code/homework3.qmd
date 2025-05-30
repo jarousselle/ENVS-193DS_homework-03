@@ -19,23 +19,23 @@ I could calculate the central tendencies for walking pace for both categories of
 ### B.
 
 ```{r}
-my_data <- read.csv("data/my_data.csv") #reading in data
+my_data <- read.csv("data/my_data .csv") #reading in data
 
 ggplot(data = my_data, #setting data frame to my_data
        aes(x = Type_of_Shoe, #setting x axis to type of shoe
-           y = Pace,
+           y = Pace_min,
            fill = Type_of_Shoe)) + #setting y axis to pace
      scale_fill_manual(values=c("#FF9FE5", "#2B50AA")) + 
   geom_boxplot() + #creating a box plot
     geom_jitter(width = 0.2,
                 height = 0) +
     labs(x = "Type of Shoe", #labels for x and y axis
-         y = "Pace (mm:ss)")
+         y = "Pace (min)")
 ```
 
 ### C.
 
-**Figure 1. Wearing docs tends to slow down walking pace.** Points represent observations of walking pace (mm:ss) for docs (n = 9) and for sneakers (n = 16). Box plots represent the central tendencies of the data and each point represents an observation of walking pace. The color represents the type of shoe (pink: docs, blue: sneakers).
+**Figure 1. Wearing docs tends to slow down walking pace.** Points represent observations of walking pace (min) for docs (n = 9) and for sneakers (n = 16). Box plots represent the central tendencies of the data and each point represents an observation of walking pace. The color represents the type of shoe (pink: docs, blue: sneakers).
 
 ### D.
 
@@ -43,10 +43,10 @@ ggplot(data = my_data, #setting data frame to my_data
 data_summary <- my_data |> 
   group_by(Type_of_Shoe) |> 
   summarise(
-    median = round(median(Pace), digits = 1),
-    minimum = round(min(Pace), digits = 1),
-    maximum = round(max(Pace), digits = 1),
-    IQR = round(IQR(Pace), digits = 1)
+    median = round(median(Pace_min), digits = 1),
+    minimum = round(min(Pace_min), digits = 1),
+    maximum = round(max(Pace_min), digits = 1),
+    IQR = round(IQR(Pace_min), digits = 1)
   )
 ft <- flextable(data_summary) #creating table from my_data and storing it as an object called ft
 ft <- set_caption(ft, caption = "Walking Pace in Docs vs Sneakers")
@@ -68,12 +68,20 @@ An affective visualization for my data could be a drawing of each shoe that I wa
 
 ### B.
 
-![](images/shoe_visualization.jpg)
+![](images/shoe_visualization-01.jpg)
 
 ### C.
 
+![](images/shoe_draft-01.jpeg)
+
 ### D.
 
-My piece shows my different shoes and my walking pace while I was wearing them.I was inspired by Stefanie Posavec and Giorgia Lupi’s Dear Data project. My work is a digital drawing on my ipad. I did this by drawing each shoe and then making a graph and plotting the shoes.
+My piece shows my different shoes and my walking pace while I was wearing them. I was inspired by Stefanie Posavec and Giorgia Lupi’s Dear Data project. My work is a digital drawing on my ipad. I did this by drawing each shoe and then making an axis for walking pace (min) at the bottom and jittering each point (shoe) vertically.
 
+#### Problem 3.
 
+### A.
+
+This research paper aimed to answer how ocean acidification impacts coral growth, which was done by performing a one way ANCOVA test that showed the reduction in calcification rates of coral in the acidification treatment was significant in comparison to the control group.
+
+![](images/figure_screenshot.png)
