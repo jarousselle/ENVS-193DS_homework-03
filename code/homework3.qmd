@@ -79,7 +79,7 @@ An affective visualization for my data could be a drawing of the type of shoe th
 
 ### B.
 
-![](images/shoe_visualization-01.jpg)
+![](images/shoe_visualization.jpg)
 
 ### C.
 
