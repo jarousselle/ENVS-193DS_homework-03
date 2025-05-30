@@ -66,3 +66,6 @@ ft
 ### A.
 
 An affective visualization for my data could be a drawing of each shoe that I was wearing for each observation. These shoe drawings would be distributed on the page to show the walking pace for that observation. This could be done by drawing a finish line and drawing shoes with a faster pace closer to the line and shoes that resulted in a slower pace further from the line.
+
+### B.
+
