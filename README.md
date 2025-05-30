@@ -19,4 +19,27 @@ library(dplyr) # summarizing and grouping data
 ```
 
 # Data and file information
+ENVS-193DS_homework-03.Rproj
+├── README.md
+├── code                                            # code folder
+│   ├── homework3_files
+│   ├── homework3.docx                  
+│   ├── homework3.html                              # rendered output
+│   ├── homework3.qmd
+│   ├── images 
+         └── figure_screenshot.png
+         └── shoe_draft-01.jpeg
+         └── shoe_visualization.jpg
+├── data                                            # data folder
+    └── my_data.csv
+├── images
+│   ├── figure_screenshot
+│   ├── shoe_draft-01.jpeg
+│   ├── shoe_draft.jpeg
+│   ├── shoe_visualization
+│   ├── shoe_visualization-01.jpg
+
+
+
+# Rendered Output
 
