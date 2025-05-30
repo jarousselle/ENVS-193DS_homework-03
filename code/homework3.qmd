@@ -60,7 +60,6 @@ ft <- theme_box(ft)
 ft
 ```
 
-
 #### Problem 2.
 
 ### A.
@@ -68,4 +67,13 @@ ft
 An affective visualization for my data could be a drawing of each shoe that I was wearing for each observation. These shoe drawings would be distributed on the page to show the walking pace for that observation. This could be done by drawing a finish line and drawing shoes with a faster pace closer to the line and shoes that resulted in a slower pace further from the line.
 
 ### B.
+
+![](images/shoe_visualization.jpg)
+
+### C.
+
+### D.
+
+My piece shows my different shoes and my walking pace while I was wearing them.I was inspired by Stefanie Posavec and Giorgia Lupi’s Dear Data project. My work is a digital drawing on my ipad. I did this by drawing each shoe and then making a graph and plotting the shoes.
+
 
