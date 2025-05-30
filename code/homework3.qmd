@@ -89,3 +89,7 @@ This research paper aimed to answer how ocean acidification impacts coral growth
 ### B.
 
 The authors were able to visually represent their statistics very clearly by showing the mean calcification rate for each colony, as represented by each bar on the graph. Additionally, the error bars provide a visual representation of an uncertainty in the data. Furthermore, the x and y axis of the bar chart are clear and understandable with calcification rate on the x-axis and the dates for each observation period on the y-axis.
+
+### C.
+
+The bar chart has a good data:ink ratio because there is no excess visual clutter. For example, the chart does not have any grid lines and has very simple numbers listed on the y-axis. The authors did a good job making an aesthetically pleasing figure because only the essential information is displayed, making the figure easy to understand and interpret quickly.
