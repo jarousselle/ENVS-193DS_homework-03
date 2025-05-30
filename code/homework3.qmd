@@ -3,6 +3,7 @@ title: "homework 3"
 format: docx
 editor: visual
 ---
+
 ```{r}
 library(tidyverse)
 library(here)
@@ -12,7 +13,7 @@ library(janitor)
 
 ### A.
 
-I could calculate the mean walking pace for both categories of shoe that I wear (docs or sneakers) to see if my shoes affect my walking pace. I think that docs make me walk slower since they are less comfortable.
+I could calculate the central tendencies for walking pace for both categories of shoe that I wear (docs or sneakers) to see if my shoes affect my walking pace. I think that docs make me walk slower since they are less comfortable.
 
 ### B.
 
@@ -28,6 +29,9 @@ ggplot(data = my_data, #setting data frame to my_data
     geom_jitter(width = 0.2,
                 height = 0) +
     labs(x = "Type of Shoe", #labels for x and y axis
-         y = "Pace (mm.ss)")
+         y = "Pace (mm:ss)")
 ```
 
+### C.
+
+**Figure 1. Wearing docs tends to slow down walking pace.** Points represent observations of walking pace (mm:ss) for docs (n = 9) and for sneakers (n = 16). Box plots represent the central tendencies of the data and each point represents an observation of walking pace. The color represents the type of shoe (pink: docs, blue: sneakers).
