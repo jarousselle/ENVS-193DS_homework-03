@@ -93,3 +93,7 @@ The authors were able to visually represent their statistics very clearly by sho
 ### C.
 
 The bar chart has a good data:ink ratio because there is no excess visual clutter. For example, the chart does not have any grid lines and has very simple numbers listed on the y-axis. The authors did a good job making an aesthetically pleasing figure because only the essential information is displayed, making the figure easy to understand and interpret quickly.
+
+### D.
+
+One recommendation that I would make for this figure is to move the figure number from the top of the figure to the caption so that everything is grouped together in one chunk. Visually, I think that this would make more sense and be more clear. In addition, the researchers could also add a short descriptive title at the top of the figure so that the viewer immediately knows what data is being displayed. Furthermore, I would recommend changing the colors to something slightly more intuitive. Personally, I would assume that the white bars are the control because they seem "blank," however it is actually the opposite in this figure. I think it would make most sense to change the treatment color to a light red to represent an acidic environment and the control color to be more blue to represent the natural ocean pH since these colors are widely accepted and intuitive for a pH scale.
