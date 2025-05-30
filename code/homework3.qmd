@@ -9,6 +9,7 @@ library(tidyverse)
 library(here)
 library(flextable)
 library(janitor)
+library(dplyr)
 ```
 
 ### A.
@@ -35,3 +36,19 @@ ggplot(data = my_data, #setting data frame to my_data
 ### C.
 
 **Figure 1. Wearing docs tends to slow down walking pace.** Points represent observations of walking pace (mm:ss) for docs (n = 9) and for sneakers (n = 16). Box plots represent the central tendencies of the data and each point represents an observation of walking pace. The color represents the type of shoe (pink: docs, blue: sneakers).
+
+### D.
+
+```{r}
+data_summary <- my_data |> 
+  group_by(Type_of_Shoe) |> 
+  summarise(
+    Median (mm.ss) = round(median(Pace), digits = 1),
+    Minimum (mm.ss) = round(min(Pace), digits = 1),
+    Maximum (mm.ss) = round(max(Pace), digits = 1),
+    IQR (mm.ss) = round(IQR(Pace), digits = 1)
+  )
+ft <- flextable(data_summary) #creating table from my_data and storing it as an object called ft
+ft
+```
+
