@@ -19,6 +19,7 @@ library(dplyr) # summarizing and grouping data
 ```
 
 # Data and file information
+```
 ENVS-193DS_homework-03.Rproj
 ├── README.md
 ├── code                                            # code folder
@@ -38,8 +39,10 @@ ENVS-193DS_homework-03.Rproj
 │   ├── shoe_draft.jpeg
 │   ├── shoe_visualization
 │   ├── shoe_visualization-01.jpg
-
+```
 
 
 # Rendered Output
+
+The rendered output is [here](https://jarousselle.github.io/ENVS-193DS_homework-03/code/homework3.html).
 
